@@ -1,9 +1,6 @@
 package com.demo2;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.net.URL;
-//@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class Page {
 
@@ -43,3 +40,4 @@ public class Page {
         return date;
     }
 }
+
