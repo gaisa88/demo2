@@ -39,5 +39,12 @@ public class Page {
     public String getDate() {
         return date;
     }
+
+    @Override
+    public String toString() {// переопределение метода toString для вывода данных в json
+        return String.format(
+                "Page[title=%s, date=%s, explanation='%s', service_version='%s', media_type=%s]",
+                title, date, explanation, service_version, media_type);
+    }
 }
 
