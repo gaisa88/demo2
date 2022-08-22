@@ -1,9 +1,6 @@
 package com.demo2;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +13,10 @@ public class PageController {
     }
 
     @RequestMapping("/pages") // объявляем rest запрос для получения списка сущностей
-    public Iterable<Page> getPage() { // получаем иттерированный список
-        List<Page> pageList = pageService.readAll(); // объявлем переменную лист объектов, которые получаем сервиса прочитав данные из таблицы
-        return pageList; // возвращаем лист сущностей
+    @ResponseBody
+    public List<Page> readAll(@RequestBody Page page){
+        List<Page> pageList = pageService.readAll();
+        return pageList;
     }
 
 }

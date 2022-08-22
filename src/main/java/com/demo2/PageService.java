@@ -12,18 +12,8 @@ public class PageService implements PageRepository{
 
 
     @Override
-    public void create(Page page) {
-
-    }
-
-    @Override
     public List<Page> readAll() {
         return pageRepository.readAll();
-    }
-
-    @Override
-    public Page read(int id) {
-        return pageRepository.read(id);
     }
 
 

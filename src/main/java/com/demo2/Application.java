@@ -12,8 +12,8 @@ public class Application {
     public static void main(String args[]) {
         RestTemplate restTemplate = new RestTemplate();
         Page page = restTemplate.getForObject("https://api.nasa.gov/planetary/apod?api_key=jed9pnQ2SYkcTMNura6JBrzXeabGTyHhtfbGZckc", Page.class);
-        System.out.println("hdurl:    " + page.getHdurl());
-        System.out.println("url:    " + page.getUrl());
+        System.out.println(page.toString());
+
         ConfigurableApplicationContext context = SpringApplication.run(Application.class);
     }
 
